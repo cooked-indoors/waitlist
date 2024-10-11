@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/landing page/components/NavOverlay.jsx",
+    "src/hooks/useClickAway.jsx",
+    "src/pages/landing page/components/CustomBtn.jsx",
+    "src/pages/landing page/components/Hero.jsx",
+    "src/pages/landing page/components/CustomBtn.jsx",
+    "src/pages/landing page/components/AboutUs.jsx"
+  ],
+  "exclude": ["node_modules"]
+}
