@@ -4,7 +4,7 @@ import { socials } from "../..";
 
 const Footer = () => {
   return (
-    <div className="py-16 text-white bg-primaryColor">
+    <div id="contact" className="py-16 text-white bg-primaryColor">
       <div className="container flex flex-col items-center">
         <h5 className="text-4xl font-bold leading-[4rem]">Contact Us</h5>
         <p className="mb-10 text-center">

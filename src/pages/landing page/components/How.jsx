@@ -3,10 +3,15 @@ import React from "react";
 
 const How = () => {
   return (
-    <div className="container py-16">
-      <div className="relative h-[540px] md:h-[1774px]">
-        <Image src={"/how.png"} alt="" layout="fill" />
-        {/* <Image src={"/how_mobile.png"} alt="" layout="fill" /> */}
+    <div id='how' className='container mx-auto'>
+      <div>
+      <img
+      loading="lazy"
+      src="/how.png"
+      alt="how it works"
+      className="object-contain self-center mt-16 w-full aspect-[0.77] max-w-[1360px] max-md:mt-10 max-md:max-w-full"
+    />
+        {/* <ImageComponent src="/how.png" alt="Main content image" /> */}
       </div>
     </div>
   );

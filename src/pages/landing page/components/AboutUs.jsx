@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className=" bg-[linear-gradient(270.15deg,_#1D319A_48.01%,_#CC813E_99.88%)]">
+    <div id="about" className=" bg-[linear-gradient(270.15deg,_#1D319A_48.01%,_#CC813E_99.88%)]">
       <div className="container flex flex-col items-center py-16 text-white">
         <h5 className="text-4xl font-bold ">About Us</h5>
         <div className="text-xl font-medium text-center">

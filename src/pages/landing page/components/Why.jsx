@@ -1,5 +1,5 @@
 import React from "react";
-import { WhyData } from "./data";
+import { WhyData } from "../../../lib/data";
 import WhyCard from "./WhyCard";
 import Image from "next/image";
 

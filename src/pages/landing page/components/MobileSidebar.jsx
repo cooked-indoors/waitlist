@@ -1,11 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import NavOverlay from "./NavOverlay";
 
 const MobileSidebar = ({ onCloseNav, children, navRef, isOpen }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  // Check if we are running on the client side
   useEffect(() => {
+    setIsClient(true);
+
+    // Handle the body's overflow style when the sidebar is open
     document.body.style.overflow = isOpen ? "hidden" : "unset";
 
     return () => {
@@ -13,6 +19,12 @@ const MobileSidebar = ({ onCloseNav, children, navRef, isOpen }) => {
     };
   }, [isOpen]);
 
+  // Return null during SSR (server-side rendering)
+  if (!isClient) {
+    return null;
+  }
+
+  // Render the component only on the client side
   return createPortal(
     <div className="absolute block border xl:hidden " ref={navRef}>
       <motion.div
@@ -33,7 +45,7 @@ const MobileSidebar = ({ onCloseNav, children, navRef, isOpen }) => {
       </motion.div>
       <NavOverlay onCloseNav={onCloseNav} />
     </div>,
-    document.body
+    document.body // Now safe because this runs only on the client
   );
 };
 

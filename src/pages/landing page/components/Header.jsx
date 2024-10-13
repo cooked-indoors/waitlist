@@ -47,7 +47,9 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:block">
+        <a href="https://wa.me/2349132939487">
           <CustomBtn text={"Order Now"} />
+          </a>
         </div>
       </div>
 
@@ -64,7 +66,9 @@ const Header = () => {
                 className="flex-col items-start"
               />
               <div className="mt-6">
+              <a href="https://wa.me/2349132939487">
                 <CustomBtn className="w-full" text={"Order Now"} />
+                </a>
               </div>
             </>
           </MobileSidebar>

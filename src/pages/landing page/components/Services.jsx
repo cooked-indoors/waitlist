@@ -1,10 +1,10 @@
 import React from "react";
-import { ServicesData } from "./data";
+import { ServicesData } from "../../../lib/data";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   return (
-    <div className="container flex flex-col items-center py-16">
+    <div id="services" className="container flex flex-col items-center py-16">
       <h5 className="text-4xl font-bold leading-[4rem] text-primaryColor">
         Our Services
       </h5>
