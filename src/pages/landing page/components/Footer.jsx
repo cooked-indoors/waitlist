@@ -1,8 +1,14 @@
+import React, { useState } from "react";
 import Image from "next/image";
-import React from "react";
 import { socials } from "../..";
+import PrivacyModal from "@/components/modal/modals/privacy";
+import TermsModal from "@/components/modal/modals/terms";
+
 
 const Footer = () => {
+  const [openPrivacy, setOpenPrivacy] = useState(false);
+  const [openTerms, setOpenTerms] = useState(false);
+
   return (
     <div id="contact" className="py-16 text-white bg-primaryColor">
       <div className="container flex flex-col items-center">
@@ -16,8 +22,8 @@ const Footer = () => {
         </p>
         <div className="flex flex-wrap items-center justify-center w-full gap-6 md:justify-between">
           <div className="flex items-center gap-4 font-medium">
-            <button>Privacy Policy</button>
-            <button>Terms & Conditions</button>
+          <button onClick={() => setOpenPrivacy(!openPrivacy)} className='hover:text-gray-400'>Privacy Policy</button>
+                <button onClick={() => setOpenTerms(!openTerms)} className='hover:text-gray-400'>Terms & Conditions</button>
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <button className="text-xl font-semibold">Follow us</button>
@@ -41,6 +47,14 @@ const Footer = () => {
         </div>
         <div className=" h-[1px] w-full bg-white"></div>
       </div>
+      <PrivacyModal
+  openModal={openPrivacy}
+  setOpenModal={setOpenPrivacy}
+      />
+      <TermsModal
+      openModal={openTerms}
+      setOpenModal={setOpenTerms}
+      />
     </div>
   );
 };

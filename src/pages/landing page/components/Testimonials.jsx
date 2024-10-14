@@ -9,7 +9,7 @@ const Testimonials = () => {
 
       <div className="container grid items-center grid-cols-1 gap-10 py-16 md:grid-cols-2 md:gap-6">
         <div className="flex flex-col gap-6 md:gap-10 ">
-          <h5 className="font-bold ">
+          <h5 className="font-bold text-center md:text-left ">
             <span className="text-4xl md:text-6xl text-orangeF3 md:leading-[6rem]">
               Testimonials
             </span>
