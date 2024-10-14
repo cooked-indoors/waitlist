@@ -26,11 +26,11 @@ const Testimonials = () => {
           {[
             {
               text: "Cooked Indoors has completely transformed the way we handle hospital food. Our patients love the meals!",
-              author: "Timilehin - Meal Kit Customer",
+              author: "Dr. Sarah",
             },
             {
               text: "The meal kit delivery is a game-changer! Fresh ingredients delivered straight to my door.",
-              author: "Sarah, Cook for Me customer.",
+              author: "Timilehin - Meal Kit Customer",
             },
           ].map((ev, index) => (
             <TestimonialsCard key={index} text={ev.text} author={ev.author} />
